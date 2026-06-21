@@ -15,7 +15,9 @@ Production-readiness pass: refactor, accessibility, SEO, features, and repositor
 - SEO/social: Open Graph + Twitter Card meta, canonical URL, `theme-color`, author meta, and JSON-LD `Person` structured data.
 - Sticky navigation with scroll-spy active-section highlighting.
 - Back-to-top button.
-- "Download résumé" button + `@media print` stylesheet (Save as PDF).
+- Two detailed **case studies** (Power Platform real-estate app; operations/documentation AI agents) in the Projects section.
+- Downloadable, brand-matched **PDF résumé** (`assets/John_Jacob_P_Gonzales_Resume.pdf`) wired to the hero button, plus a `@media print` stylesheet as a fallback.
+- Rendered **`og-image.png`** (1200×630) and pointed social meta tags at it.
 - `favicon.svg`, `og-image.svg`, `site.webmanifest`.
 - `404.html` on-brand error page, `robots.txt`, `sitemap.xml`.
 - Cloudflare Pages `_headers` (CSP + security/cache headers) and `_redirects`.
@@ -29,6 +31,7 @@ Production-readiness pass: refactor, accessibility, SEO, features, and repositor
 - Wrapped page content in a semantic `<main>` landmark; added `aria-labelledby` to sections and `aria-hidden` to decorative elements.
 - External links hardened with `rel="noopener noreferrer"` and screen-reader "opens in new tab" text.
 - Renamed entry file to `index.html` for clean hosting.
+- Set canonical/OG/sitemap URLs to the recommended custom domain `https://johnjacobgonzales.com/`.
 
 ### Fixed
 - Critical: sections no longer render blank when JavaScript is unavailable.

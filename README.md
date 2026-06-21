@@ -99,7 +99,7 @@ Edit content directly in [`index.html`](index.html). Common changes:
 
 ## Usage
 
-- **Download résumé**: the hero button calls `window.print()`; the print stylesheet renders a clean, light, recruiter-friendly version. Choose "Save as PDF" in the dialog.
+- **Download résumé**: the hero button downloads a ready-made, brand-matched PDF résumé ([`assets/John_Jacob_P_Gonzales_Resume.pdf`](assets/John_Jacob_P_Gonzales_Resume.pdf)). A `@media print` stylesheet is also included, so visitors who press Ctrl/Cmd+P get a clean light version of the page too.
 - **Navigation**: sticky top nav with active-section highlighting; back-to-top appears after scrolling.
 
 ## Deployment
@@ -127,8 +127,10 @@ john-jacob-gonzales-portfolio/
 ├── _headers                # Cloudflare Pages security + cache headers
 ├── _redirects              # Cloudflare Pages redirects (legacy filename → /)
 ├── assets/
-│   ├── favicon.svg         # Scalable favicon
-│   └── og-image.svg        # Social share card (see DEPLOYMENT for PNG note)
+│   ├── favicon.svg                     # Scalable favicon
+│   ├── og-image.svg                    # Social card (source)
+│   ├── og-image.png                    # Social card (1200×630, used by meta tags)
+│   └── John_Jacob_P_Gonzales_Resume.pdf# Downloadable résumé (hero button)
 ├── docs/
 │   ├── DEPLOYMENT.md       # Deployment guide
 │   └── PORTFOLIO.md        # Portfolio blurbs, résumé entries, LinkedIn copy
@@ -144,7 +146,6 @@ john-jacob-gonzales-portfolio/
 
 ## Future improvements
 
-- Export `og-image.svg` → `og-image.png` (1200×630) for universal social-card support.
 - Self-host & subset fonts to drop the third-party request and improve LCP.
 - Add real screenshots and a short case-study writeup of one automation project.
 - Optional: privacy-friendly analytics (e.g. Cloudflare Web Analytics — no cookies).

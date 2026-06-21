@@ -10,7 +10,7 @@
 <meta name="description" content="John Jacob P. Gonzales — Testing &amp; Commissioning Engineer, Train Operator, and Associate Safety Officer in Philippine railway infrastructure, with a growing focus on process automation and AI tooling.">
 <meta name="author" content="John Jacob P. Gonzales">
 <meta name="theme-color" content="#07090D">
-<link rel="canonical" href="https://johnjacobgonzales.pages.dev/">
+<link rel="canonical" href="https://johnjacobgonzales.com/">
 
 <!-- Icons & manifest -->
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -20,16 +20,19 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="John Jacob P. Gonzales // T&amp;C Engineer · MRT-7">
 <meta property="og:description" content="Testing &amp; Commissioning Engineer, Train Operator, and Associate Safety Officer — bridging railway infrastructure and automation/AI tooling.">
-<meta property="og:url" content="https://johnjacobgonzales.pages.dev/">
-<meta property="og:image" content="https://johnjacobgonzales.pages.dev/assets/og-image.svg">
+<meta property="og:url" content="https://johnjacobgonzales.com/">
+<meta property="og:image" content="https://johnjacobgonzales.com/assets/og-image.png">
 <meta property="og:image:alt" content="John Jacob P. Gonzales — T&amp;C Engineer, MRT-7">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_PH">
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="John Jacob P. Gonzales // T&amp;C Engineer · MRT-7">
 <meta name="twitter:description" content="Testing &amp; Commissioning Engineer, Train Operator, and Associate Safety Officer — bridging railway infrastructure and automation/AI tooling.">
-<meta name="twitter:image" content="https://johnjacobgonzales.pages.dev/assets/og-image.svg">
+<meta name="twitter:image" content="https://johnjacobgonzales.com/assets/og-image.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,7 +49,7 @@
   "address": { "@type": "PostalAddress", "addressLocality": "Caloocan City", "addressCountry": "PH" },
   "email": "mailto:johnjacobgonzales12678@gmail.com",
   "telephone": "+639174084990",
-  "url": "https://johnjacobgonzales.pages.dev/",
+  "url": "https://johnjacobgonzales.com/",
   "sameAs": ["https://linkedin.com/in/johnjacobgonzales"],
   "knowsAbout": ["MEPF Commissioning", "Railway Operations", "Occupational Safety", "Power Platform", "Process Automation", "AI Agents"]
 }
@@ -556,6 +559,92 @@
     line-height: 1.6;
   }
 
+  /* Case studies */
+  .case-head {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 48px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .case-head::before { content: ""; width: 24px; height: 1px; background: var(--cyan); box-shadow: 0 0 10px var(--cyan-glow); }
+
+  .case {
+    border: 1px solid var(--rule);
+    background: var(--bg-panel);
+    padding: 30px 32px;
+    margin-bottom: 16px;
+    position: relative;
+    transition: border-color .25s, box-shadow .25s;
+  }
+  .case:hover { border-color: var(--cyan-deep); box-shadow: 0 0 30px rgba(0,217,255,0.06); }
+  .case .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.625rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    display: block;
+    margin-bottom: 12px;
+  }
+  .case h3 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin: 0 0 12px;
+    color: var(--text);
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+  .case .summary {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--text-soft);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .case dl {
+    display: grid;
+    grid-template-columns: 116px 1fr;
+    gap: 12px 22px;
+    margin: 24px 0 0;
+    padding-top: 22px;
+    border-top: 1px dashed var(--rule);
+  }
+  .case dt {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.625rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    padding-top: 2px;
+  }
+  .case dd {
+    margin: 0;
+    font-size: 0.906rem;
+    color: var(--text-soft);
+    line-height: 1.6;
+  }
+  .case .toolset { display: flex; flex-wrap: wrap; gap: 7px; }
+  .case .toolset span {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border: 1px solid var(--rule);
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  @media (max-width: 760px) {
+    .case dl { grid-template-columns: 1fr; gap: 4px 0; }
+    .case dt { margin-top: 12px; }
+  }
+
   .skill-rows { display: flex; flex-direction: column; gap: 28px; }
   .skill-row {
     display: grid;
@@ -834,7 +923,7 @@
     <p class="lede">Engineer working at the intersection of <strong>railway commissioning</strong>, <strong>live operations</strong>, and <strong>workplace safety</strong> — building an end-to-end view of how modern transit infrastructure actually performs.</p>
 
     <div class="hero-actions">
-      <button type="button" class="btn btn--primary" id="downloadResume">Download résumé <span aria-hidden="true">↓</span></button>
+      <a class="btn btn--primary" href="assets/John_Jacob_P_Gonzales_Resume.pdf" download>Download résumé <span aria-hidden="true">↓</span></a>
       <a class="btn" href="#contact">Get in touch <span aria-hidden="true">→</span></a>
     </div>
 
@@ -969,6 +1058,48 @@
           <h3>Generative-AI Workflow Tooling</h3>
           <p>Hands-on with GoHighLevel, Microsoft 365 integrations, Dynamics 365 Field Service, Process Mining, and effective prompting for generative-AI tools — applied to small, real-world workflow problems.</p>
         </div>
+
+        <!--
+          CASE STUDIES — scaffolded from your stated projects (Power Apps real-estate
+          canvas app, Power Automate Excel/email flows, and custom AI agents).
+          Refine the wording to match reality, and add a concrete metric where you can
+          (e.g. "cut report prep from ~2 hrs to ~15 min"). I left honest, number-free
+          outcomes so the page reads well even before you add figures.
+        -->
+        <p class="case-head">// Selected case studies</p>
+
+        <article class="case">
+          <span class="tag">// Power Platform · Low-code App</span>
+          <h3>Real-Estate Listing &amp; Lead Manager</h3>
+          <p class="summary">A Power Apps canvas application that replaced scattered spreadsheets and email threads with a single place to capture listings and leads, paired with Power Automate flows that handle notifications and keep an Excel workbook in sync.</p>
+          <dl>
+            <dt>Context</dt>
+            <dd>Property listings and client leads were tracked manually across spreadsheets and inboxes — slow to update, easy to lose, and hard to report on.</dd>
+            <dt>What I built</dt>
+            <dd>A canvas app for structured listing/lead entry and status tracking, with Power Automate flows for automated email notifications and Excel data synchronization.</dd>
+            <dt>Stack</dt>
+            <dd><span class="toolset"><span>Power Apps</span><span>Power Automate</span><span>Excel</span><span>Microsoft 365</span></span></dd>
+            <dt>Outcome</dt>
+            <dd>One source of truth for listings and leads, automated status notifications, and far less manual re-keying between systems.<!-- TODO: add a metric, e.g. hours saved per week --></dd>
+          </dl>
+        </article>
+
+        <article class="case">
+          <span class="tag">// AI Agents · Automation</span>
+          <h3>Operations &amp; Documentation AI Agents</h3>
+          <p class="summary">A set of custom AI agents that take repetitive research, drafting, and lookup work off engineering and operations teams — built with modern LLM tooling and deliberate prompt-engineering practice.</p>
+          <dl>
+            <dt>Context</dt>
+            <dd>Technical research, first-draft commissioning documentation, and routine operational questions consumed engineering time that was better spent on the work itself.</dd>
+            <dt>What I built</dt>
+            <dd>Domain-specific agents for technical research, documentation assistance, and operations-focused automations, with structured prompts and guardrails tuned per use case.</dd>
+            <dt>Stack</dt>
+            <dd><span class="toolset"><span>LLM Tooling</span><span>Prompt Engineering</span><span>Power Automate</span><span>Microsoft 365</span></span></dd>
+            <dt>Outcome</dt>
+            <dd>Faster first drafts and quicker answers to recurring questions, freeing engineers to focus on higher-value commissioning work.<!-- TODO: add a metric, e.g. draft time reduced by X% --></dd>
+          </dl>
+        </article>
+
       </div>
     </div>
   </section>
@@ -1199,11 +1330,6 @@
   toTop.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
   });
-
-  // "Download résumé" -> open the print dialog (user picks "Save as PDF").
-  // The @media print stylesheet renders the page as a clean, light résumé.
-  var dl = document.getElementById('downloadResume');
-  if (dl) { dl.addEventListener('click', function () { window.print(); }); }
 </script>
 
 <style>

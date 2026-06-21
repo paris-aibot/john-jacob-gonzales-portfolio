@@ -67,19 +67,20 @@ git push -u origin main
    - `sitemap.xml`
    - `robots.txt`
 
-2. **Generate a PNG social card.** Most platforms (LinkedIn, Facebook, X) do
-   **not** render SVG Open Graph images. Convert the provided SVG once:
+2. **Social card.** A `1200×630` PNG (`assets/og-image.png`) is **already generated**
+   and wired into the OG/Twitter meta tags, so social sharing works out of the box.
+   If you edit `og-image.svg`, regenerate the PNG with any of:
 
    ```bash
-   # using rsvg-convert (brew install librsvg) — preferred
-   rsvg-convert -w 1200 -h 630 assets/og-image.svg -o assets/og-image.png
+   # macOS (no install needed) — Quick Look + crop
+   qlmanage -t -s 1200 -o /tmp assets/og-image.svg && \
+     sips -c 630 1200 /tmp/og-image.svg.png --out assets/og-image.png
 
-   # OR using ImageMagick
-   magick -density 144 -background none assets/og-image.svg -resize 1200x630 assets/og-image.png
+   # or rsvg-convert (brew install librsvg)
+   rsvg-convert -w 1200 -h 630 assets/og-image.svg -o assets/og-image.png
    ```
 
-   Then point the OG/Twitter `image` meta tags in `index.html` to
-   `assets/og-image.png` and redeploy. Validate with the
+   After any change, validate with the
    [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/) and
    [Meta Sharing Debugger](https://developers.facebook.com/tools/debug/).
 
