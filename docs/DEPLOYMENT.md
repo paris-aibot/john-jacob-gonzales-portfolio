@@ -84,7 +84,11 @@ git push -u origin main
    [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/) and
    [Meta Sharing Debugger](https://developers.facebook.com/tools/debug/).
 
-3. **Add screenshots** to `docs/` and reference them in the README.
+3. **Screenshots** are already in `docs/` (`screenshot-hero.png`, `-experience`,
+   `-projects`, `-case-studies`, `-mobile`) and embedded in the README. To
+   regenerate them after content edits, serve the site locally
+   (`python3 -m http.server`) and capture in a real browser at 1280-wide
+   (desktop) and 390-wide (mobile), or re-run your preferred headless capture.
 
 4. **Custom domain (optional):** Pages → your project → **Custom domains** →
    add your domain and follow the DNS instructions.

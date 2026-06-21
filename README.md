@@ -44,17 +44,21 @@ A single-page portfolio that presents an unusual, deliberate career blend — **
 
 ## Screenshots
 
-> Add screenshots after first deploy. Suggested captures (place in `docs/`):
->
-> - `docs/screenshot-hero.png` — hero / landing
-> - `docs/screenshot-experience.png` — experience timeline
-> - `docs/screenshot-mobile.png` — mobile layout
->
-> Then reference them here:
->
-> ```md
-> ![Hero](docs/screenshot-hero.png)
-> ```
+### Hero
+![Hero / landing](docs/screenshot-hero.png)
+
+### Experience timeline
+![Experience timeline](docs/screenshot-experience.png)
+
+### Projects & case studies
+![Projects](docs/screenshot-projects.png)
+![Case studies](docs/screenshot-case-studies.png)
+
+### Mobile
+<img src="docs/screenshot-mobile.png" alt="Mobile layout" width="320">
+
+> Screenshots are rendered from the live page. To regenerate after content changes,
+> see the capture notes in [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md).
 
 ## Tech stack
 
