@@ -1,14 +1,17 @@
 name: Deploy to Cloudflare Pages
 
-# Deploys the static site on every push to the default branch.
-# Requires two repository secrets (Settings → Secrets and variables → Actions):
-#   CLOUDFLARE_API_TOKEN   – token with the "Cloudflare Pages: Edit" permission
-#   CLOUDFLARE_ACCOUNT_ID  – your Cloudflare account ID
-# And one Pages project named below (create it once in the dashboard or via wrangler).
+# OPTIONAL CI/CD deploy. Not needed if you connect the repo via the Cloudflare
+# Pages dashboard ("Connect to Git"), which builds on every push automatically.
+#
+# This workflow is set to MANUAL ONLY (workflow_dispatch) so it never auto-runs
+# or shows a failing check. To enable push-triggered CI deploys instead:
+#   1. Add an `on: push: branches: [main]` trigger below.
+#   2. Add repo secrets (Settings → Secrets and variables → Actions):
+#        CLOUDFLARE_API_TOKEN   – token with "Cloudflare Pages: Edit"
+#        CLOUDFLARE_ACCOUNT_ID  – your Cloudflare account ID
+#   3. Ensure the --project-name below matches your Pages project.
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
