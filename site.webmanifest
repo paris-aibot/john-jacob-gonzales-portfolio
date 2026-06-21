@@ -1,0 +1,17 @@
+{
+  "name": "John Jacob P. Gonzales — T&C Engineer",
+  "short_name": "JJG Portfolio",
+  "description": "Portfolio of John Jacob P. Gonzales — Testing & Commissioning Engineer, Train Operator, and Safety Officer (MRT-7).",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07090D",
+  "theme_color": "#07090D",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

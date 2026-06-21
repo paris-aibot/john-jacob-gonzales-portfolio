@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects
+# Redirect the original exported filename to the clean root URL.
+/John_Jacob_Gonzales_HTML_WEBSITE.html  /  301

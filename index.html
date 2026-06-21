@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Progressive-enhancement flag: lets us hide content with JS only when JS is available (no-JS users still see everything). -->
+<script>document.documentElement.classList.add('js');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>John Jacob P. Gonzales // T&amp;C Engineer · MRT-7</title>
+<meta name="description" content="John Jacob P. Gonzales — Testing &amp; Commissioning Engineer, Train Operator, and Associate Safety Officer in Philippine railway infrastructure, with a growing focus on process automation and AI tooling.">
+<meta name="author" content="John Jacob P. Gonzales">
+<meta name="theme-color" content="#07090D">
+<link rel="canonical" href="https://johnjacobgonzales.pages.dev/">
+
+<!-- Icons & manifest -->
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="John Jacob P. Gonzales // T&amp;C Engineer · MRT-7">
+<meta property="og:description" content="Testing &amp; Commissioning Engineer, Train Operator, and Associate Safety Officer — bridging railway infrastructure and automation/AI tooling.">
+<meta property="og:url" content="https://johnjacobgonzales.pages.dev/">
+<meta property="og:image" content="https://johnjacobgonzales.pages.dev/assets/og-image.svg">
+<meta property="og:image:alt" content="John Jacob P. Gonzales — T&amp;C Engineer, MRT-7">
+<meta property="og:locale" content="en_PH">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="John Jacob P. Gonzales // T&amp;C Engineer · MRT-7">
+<meta name="twitter:description" content="Testing &amp; Commissioning Engineer, Train Operator, and Associate Safety Officer — bridging railway infrastructure and automation/AI tooling.">
+<meta name="twitter:image" content="https://johnjacobgonzales.pages.dev/assets/og-image.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Structured data for rich results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "John Jacob P. Gonzales",
+  "jobTitle": "MEPF Testing & Commissioning Engineer",
+  "worksFor": { "@type": "Organization", "name": "Mass Rail Transit 7 Inc." },
+  "address": { "@type": "PostalAddress", "addressLocality": "Caloocan City", "addressCountry": "PH" },
+  "email": "mailto:johnjacobgonzales12678@gmail.com",
+  "telephone": "+639174084990",
+  "url": "https://johnjacobgonzales.pages.dev/",
+  "sameAs": ["https://linkedin.com/in/johnjacobgonzales"],
+  "knowsAbout": ["MEPF Commissioning", "Railway Operations", "Occupational Safety", "Power Platform", "Process Automation", "AI Agents"]
+}
+</script>
+
+<style>
+  :root {
+    --bg:        #07090D;
+    --bg-panel:  #0E131C;
+    --bg-elev:   #131A26;
+    --rule:      #1C2533;
+    --rule-soft: #131A26;
+    --text:      #E6EAF2;
+    --text-soft: #A1ACBD;
+    --muted:     #707B8F;   /* raised from #5C6779 to meet WCAG AA (~4.9:1) */
+    --cyan:      #00D9FF;
+    --cyan-deep: #00A6C7;
+    --cyan-glow: rgba(0, 217, 255, 0.18);
+    --amber:     #FFB627;
+    --green:     #2BD37B;
+    --col-label: 140px;     /* shared two-column grid: label rail + content */
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; font-size: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.55;
+    font-size: 0.969rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+      linear-gradient(to right, rgba(0,217,255,0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0,217,255,0.035) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 30%, transparent 100%);
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 50% 0%, rgba(0,217,255,0.06), transparent 60%),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px);
+  }
+
+  /* Accessibility: skip link */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    background: var(--cyan);
+    color: #00121a;
+    padding: 10px 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    text-decoration: none;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .skip-link:focus { left: 12px; top: 12px; }
+
+  /* Visible, on-brand focus ring for keyboard users */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 36px;
+    position: relative;
+    z-index: 1;
+  }
+
+  nav.top {
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    border-bottom: 1px solid var(--rule-soft);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(7, 9, 13, 0.82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  nav.top .mark {
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  nav.top .mark .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse 2.2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.55; transform: scale(0.85); }
+  }
+  nav.top .links a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 22px;
+    transition: color .2s ease;
+  }
+  nav.top .links a:hover,
+  nav.top .links a.active { color: var(--cyan); }
+
+  header.hero {
+    padding: 110px 0 100px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+  .hero::before, .hero::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 1px solid var(--cyan);
+    opacity: 0.6;
+  }
+  .hero::before {
+    top: 36px; left: -2px;
+    border-right: 0; border-bottom: 0;
+  }
+  .hero::after {
+    bottom: 36px; right: -2px;
+    border-left: 0; border-top: 0;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.719rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin: 0 0 36px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 36px;
+    height: 1px;
+    background: var(--cyan);
+    box-shadow: 0 0 10px var(--cyan-glow);
+  }
+  .eyebrow .sep { color: var(--muted); margin: 0 4px; }
+
+  h1.name {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
+    font-size: clamp(48px, 8vw, 108px);
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+    margin: 0 0 36px;
+    text-transform: uppercase;
+  }
+  h1.name .ln1 {
+    display: block;
+    color: var(--text);
+  }
+  h1.name .ln2 {
+    display: block;
+    color: var(--cyan);
+    font-weight: 400;
+    font-style: italic;
+    text-shadow: 0 0 24px var(--cyan-glow);
+  }
+
+  .hero p.lede {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.55;
+    color: var(--text-soft);
+    max-width: 660px;
+    margin: 0 0 36px;
+    letter-spacing: -0.005em;
+  }
+  .hero p.lede strong { color: var(--text); font-weight: 500; }
+
+  /* Hero call-to-action buttons */
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 0 0 52px;
+  }
+  .btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 13px 22px;
+    border: 1px solid var(--rule);
+    background: var(--bg-panel);
+    color: var(--text);
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: border-color .2s, color .2s, background .2s, transform .2s;
+  }
+  .btn:hover { border-color: var(--cyan-deep); color: var(--cyan); transform: translateY(-2px); }
+  .btn--primary { border-color: var(--cyan-deep); color: var(--cyan); background: rgba(0,217,255,0.06); }
+  .btn--primary:hover { background: rgba(0,217,255,0.12); }
+
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-top: 24px;
+  }
+  .meta-grid .cell {
+    background: var(--bg-panel);
+    padding: 22px 24px;
+    position: relative;
+  }
+  .meta-grid .cell::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 18px; height: 1px;
+    background: var(--cyan);
+  }
+  .meta-grid .cell .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 10px;
+  }
+  .meta-grid .cell .value {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 0.9375rem;
+    color: var(--text);
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+  }
+  .meta-grid .cell a {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    transition: color .2s, border-color .2s;
+  }
+  .meta-grid .cell a:hover { color: var(--cyan); border-color: var(--cyan); }
+
+  section {
+    padding: 110px 0;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+    scroll-margin-top: 70px; /* offset for sticky nav on anchor jumps */
+  }
+  section:last-of-type { border-bottom: none; }
+
+  .section-head {
+    display: grid;
+    grid-template-columns: var(--col-label) 1fr;
+    gap: 40px;
+    align-items: baseline;
+    margin-bottom: 64px;
+    padding-bottom: 24px;
+    border-bottom: 1px dashed var(--rule);
+  }
+  .section-head .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.18em;
+    color: var(--cyan);
+    text-transform: uppercase;
+  }
+  .section-head .num .slash { color: var(--muted); }
+  .section-head h2 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
+    font-size: clamp(26px, 3.2vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.005em;
+    margin: 0;
+    color: var(--text);
+    text-transform: uppercase;
+  }
+  .section-head h2 .accent { color: var(--cyan); font-weight: 400; }
+
+  /* Shared two-column layout: empty label rail + offset content (no empty-span hacks) */
+  .colgrid {
+    display: grid;
+    grid-template-columns: var(--col-label) 1fr;
+    gap: 40px;
+  }
+  .colgrid > .body,
+  .colgrid > .content { grid-column: 2; }
+
+  .about-grid .body { max-width: 720px; }
+  .about-grid p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.1875rem;
+    line-height: 1.65;
+    color: var(--text-soft);
+    margin: 0 0 22px;
+  }
+  .about-grid p:last-child { margin-bottom: 0; }
+  .about-grid p strong { color: var(--text); font-weight: 500; }
+  .about-grid p em {
+    color: var(--cyan);
+    font-style: normal;
+    border-bottom: 1px dashed var(--cyan-deep);
+    padding-bottom: 1px;
+  }
+
+  .exp-list { display: flex; flex-direction: column; gap: 0; }
+  .exp {
+    display: grid;
+    grid-template-columns: var(--col-label) 1fr;
+    gap: 40px;
+    padding: 36px 0;
+    border-top: 1px solid var(--rule);
+    position: relative;
+  }
+  .exp:first-child { border-top: none; padding-top: 0; }
+  .exp::before {
+    content: "";
+    position: absolute;
+    left: 138px;
+    top: 36px;
+    width: 6px;
+    height: 6px;
+    background: var(--cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--cyan-glow);
+  }
+  .exp:first-child::before { top: 6px; }
+  .exp .when {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    text-transform: uppercase;
+    padding-top: 4px;
+  }
+  .exp .when .now {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 2px 8px;
+    background: rgba(43, 211, 123, 0.12);
+    color: var(--green);
+    border: 1px solid rgba(43, 211, 123, 0.4);
+    font-size: 0.594rem;
+    letter-spacing: 0.18em;
+  }
+  .exp .role h3 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
+    font-size: 1.375rem;
+    line-height: 1.25;
+    margin: 0 0 6px;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.005em;
+  }
+  .exp .role .org {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.719rem;
+    color: var(--muted);
+    margin-bottom: 22px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .exp .role .org .badge {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 2px 8px;
+    border: 1px solid var(--cyan-deep);
+    background: rgba(0, 217, 255, 0.06);
+    color: var(--cyan);
+    font-size: 0.594rem;
+    letter-spacing: 0.16em;
+  }
+  .exp .role ul { list-style: none; padding: 0; margin: 0; }
+  .exp .role ul li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    font-size: 0.9375rem;
+    color: var(--text-soft);
+    line-height: 1.6;
+  }
+  .exp .role ul li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--cyan);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 0.8125rem;
+  }
+
+  .projects-intro {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--text-soft);
+    margin: 0 0 36px;
+    max-width: 680px;
+  }
+  .project-card {
+    padding: 28px 32px;
+    background: var(--bg-panel);
+    border: 1px solid var(--rule);
+    margin-bottom: 14px;
+    transition: border-color .25s, transform .25s, box-shadow .25s;
+    position: relative;
+  }
+  .project-card::before {
+    content: "";
+    position: absolute;
+    top: -1px; left: -1px;
+    width: 14px; height: 14px;
+    border-top: 1px solid var(--cyan);
+    border-left: 1px solid var(--cyan);
+    transition: width .25s, height .25s;
+  }
+  .project-card::after {
+    content: "";
+    position: absolute;
+    bottom: -1px; right: -1px;
+    width: 14px; height: 14px;
+    border-bottom: 1px solid var(--cyan);
+    border-right: 1px solid var(--cyan);
+    transition: width .25s, height .25s;
+  }
+  .project-card:hover {
+    border-color: var(--cyan-deep);
+    box-shadow: 0 0 0 1px var(--cyan-deep), 0 0 30px rgba(0,217,255,0.08);
+  }
+  .project-card:hover::before, .project-card:hover::after {
+    width: 22px; height: 22px;
+  }
+  .project-card .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.625rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 12px;
+    display: block;
+  }
+  .project-card h3 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
+    font-size: 1.1875rem;
+    margin: 0 0 10px;
+    color: var(--text);
+    text-transform: uppercase;
+  }
+  .project-card p {
+    margin: 0;
+    font-size: 0.906rem;
+    color: var(--text-soft);
+    line-height: 1.6;
+  }
+
+  .skill-rows { display: flex; flex-direction: column; gap: 28px; }
+  .skill-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px dashed var(--rule);
+  }
+  .skill-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .skill-row .cat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    padding-top: 4px;
+  }
+  .skill-row .items { display: flex; flex-wrap: wrap; gap: 8px; }
+  .skill-row .items span {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 0.8125rem;
+    padding: 6px 12px;
+    border: 1px solid var(--rule);
+    background: var(--bg-panel);
+    color: var(--text);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    transition: background .2s, border-color .2s, color .2s;
+  }
+  .skill-row .items span:hover {
+    background: rgba(0, 217, 255, 0.06);
+    border-color: var(--cyan-deep);
+    color: var(--cyan);
+  }
+
+  .cert-list { display: flex; flex-direction: column; }
+  .cert {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: baseline;
+    padding: 18px 0;
+    border-top: 1px solid var(--rule);
+    transition: padding-left .2s, border-color .2s;
+  }
+  .cert:first-child { border-top: none; }
+  .cert:hover { padding-left: 14px; border-color: var(--cyan-deep); }
+  .cert .title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.969rem;
+    color: var(--text);
+    font-weight: 400;
+  }
+  .cert .title .issuer {
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    display: block;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .cert .date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+    color: var(--cyan);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .contact-inner { max-width: 720px; }
+  .contact-inner h2.big {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
+    font-size: clamp(32px, 4.6vw, 52px);
+    line-height: 1.1;
+    margin: 0 0 36px;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  .contact-inner h2.big em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--cyan);
+    text-shadow: 0 0 24px var(--cyan-glow);
+  }
+  .status-bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    background: rgba(43, 211, 123, 0.08);
+    border: 1px solid rgba(43, 211, 123, 0.35);
+    margin-bottom: 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--green);
+  }
+  .status-bar .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse 2.2s ease-in-out infinite;
+  }
+  .contact-links { display: flex; flex-direction: column; margin-top: 40px; }
+  .contact-links a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 22px 0;
+    border-top: 1px solid var(--rule);
+    text-decoration: none;
+    color: var(--text);
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    transition: padding .25s, color .25s;
+    text-transform: uppercase;
+  }
+  .contact-links a:last-child { border-bottom: 1px solid var(--rule); }
+  .contact-links a:hover { padding-left: 18px; color: var(--cyan); }
+  .contact-links a .arrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8125rem;
+    color: var(--muted);
+    transition: color .25s, transform .25s;
+  }
+  .contact-links a:hover .arrow { color: var(--cyan); transform: translateX(6px); }
+
+  footer {
+    padding: 40px 0 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.656rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-top: 1px solid var(--rule);
+  }
+  footer .sys { display: flex; align-items: center; gap: 8px; }
+  footer .sys .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 6px var(--cyan);
+  }
+
+  /* Back-to-top button */
+  .to-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 60;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    background: var(--bg-elev);
+    border: 1px solid var(--rule);
+    color: var(--cyan);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity .3s, transform .3s, visibility .3s, border-color .2s;
+  }
+  .to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+  .to-top:hover { border-color: var(--cyan-deep); }
+
+  /* Scroll-reveal: only hide content when JS is present (no-JS users see everything) */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .9s ease, transform .9s ease;
+  }
+  .js .reveal.in { opacity: 1; transform: translateY(0); }
+
+  .js .hero .eyebrow { animation: fadeUp .8s .1s both; }
+  .js .hero h1.name { animation: fadeUp .95s .25s both; }
+  .js .hero p.lede { animation: fadeUp .95s .42s both; }
+  .js .hero .hero-actions { animation: fadeUp .95s .54s both; }
+  .js .hero .meta-grid { animation: fadeUp .95s .64s both; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Respect users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: .001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .001ms !important;
+    }
+    .js .reveal { opacity: 1; transform: none; }
+  }
+
+  @media (max-width: 760px) {
+    .wrap { padding: 0 22px; }
+    nav.top { flex-direction: column; gap: 12px; align-items: flex-start; position: static; backdrop-filter: none; }
+    nav.top .links a { margin-left: 0; margin-right: 16px; }
+    header.hero { padding: 64px 0 70px; }
+    section { padding: 70px 0; scroll-margin-top: 16px; }
+    .section-head,
+    .colgrid,
+    .exp { grid-template-columns: 1fr; gap: 20px; }
+    .colgrid > .body,
+    .colgrid > .content { grid-column: 1; }
+    .section-head { margin-bottom: 40px; }
+    .skill-row { grid-template-columns: 1fr; gap: 14px; }
+    .cert { grid-template-columns: 1fr; gap: 6px; }
+    .cert:hover { padding-left: 0; }
+    .meta-grid { grid-template-columns: 1fr 1fr; }
+    .exp::before { display: none; }
+  }
+
+  /* Print / "Save as PDF" — turns the page into a clean résumé */
+  @media print {
+    :root { --bg: #fff; --text: #111; --text-soft: #333; --muted: #555; --rule: #ccc; --cyan: #0a6; }
+    body { background: #fff; color: #111; font-size: 11pt; }
+    body::before, body::after, nav.top, .hero-actions, .to-top, .skip-link, .status-bar { display: none !important; }
+    .wrap { max-width: 100%; padding: 0; }
+    section, header.hero { padding: 18px 0; border-color: #ccc; }
+    .js .reveal { opacity: 1 !important; transform: none !important; }
+    a { color: #111; text-decoration: none; }
+    .project-card, .skill-row .items span { border-color: #ccc; }
+    h1.name, .section-head h2, .contact-inner h2.big { color: #111; }
+    h1.name .ln2, .section-head h2 .accent, .contact-inner h2.big em { color: #0a6; text-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#about">Skip to content</a>
+
+<div class="wrap">
+
+  <nav class="top">
+    <a class="mark" href="#top" aria-label="John Jacob Gonzales — top of page">
+      <span class="dot" aria-hidden="true"></span>
+      JJG // T&amp;C ENGINEER · MRT-7
+    </a>
+    <span class="links">
+      <a href="#about">About</a>
+      <a href="#experience">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </span>
+  </nav>
+
+  <header class="hero" id="top">
+    <p class="eyebrow">
+      MEPF Commissioning <span class="sep" aria-hidden="true">//</span> Railway Operations <span class="sep" aria-hidden="true">//</span> Safety
+    </p>
+    <h1 class="name">
+      <span class="ln1">John Jacob</span>
+      <span class="ln2">P. Gonzales</span>
+    </h1>
+    <p class="lede">Engineer working at the intersection of <strong>railway commissioning</strong>, <strong>live operations</strong>, and <strong>workplace safety</strong> — building an end-to-end view of how modern transit infrastructure actually performs.</p>
+
+    <div class="hero-actions">
+      <button type="button" class="btn btn--primary" id="downloadResume">Download résumé <span aria-hidden="true">↓</span></button>
+      <a class="btn" href="#contact">Get in touch <span aria-hidden="true">→</span></a>
+    </div>
+
+    <div class="meta-grid">
+      <div class="cell">
+        <span class="label">// Location</span>
+        <span class="value">Caloocan City<br>Philippines</span>
+      </div>
+      <div class="cell">
+        <span class="label">// Active Role</span>
+        <span class="value">MEPF T&amp;C<br>Engineer</span>
+      </div>
+      <div class="cell">
+        <span class="label">// Degree</span>
+        <span class="value">BET Railway<br>Technology · 2022</span>
+      </div>
+      <div class="cell">
+        <span class="label">// Channels</span>
+        <span class="value"><a href="mailto:johnjacobgonzales12678@gmail.com">Email</a> · <a href="https://linkedin.com/in/johnjacobgonzales" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+  <section id="about" class="reveal" aria-labelledby="about-h">
+    <div class="section-head">
+      <span class="num"><span class="slash">//</span> 01_ABOUT</span>
+      <h2 id="about-h">An integrated view <span class="accent">// drawing board to live track.</span></h2>
+    </div>
+    <div class="about-grid colgrid">
+      <div class="body">
+        <p>I'm a <strong>Testing &amp; Commissioning Engineer</strong> at the MRT-7 depot, where I verify that mechanical, electrical, plumbing, and fire-protection systems work the way they were designed to before the trains and passengers ever rely on them.</p>
+        <p>Concurrently, I serve as a certified <strong>Train Operator on the MRT-7 line</strong> and as an <strong>Associate Safety Officer</strong>. That mix is unusual — and intentional. It means I can walk a commissioning checklist with the same eyes that read a live cab signal, and spot operational risks long before they show up in service.</p>
+        <p>Lately I've been pushing into <em>process automation and data tooling</em> — Power Automate, Power Apps, Power BI — and building <em>AI agents and small applications</em> to take repetitive work off engineering teams. I'm interested in where infrastructure meets software.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="reveal" aria-labelledby="exp-h">
+    <div class="section-head">
+      <span class="num"><span class="slash">//</span> 02_EXPERIENCE</span>
+      <h2 id="exp-h">Operational <span class="accent">// log</span></h2>
+    </div>
+
+    <div class="exp-list">
+
+      <div class="exp">
+        <span class="when">
+          Jan 2025 —<br>Present
+          <br><span class="now">● Active</span>
+        </span>
+        <div class="role">
+          <h3>MEPF Testing &amp; Commissioning Engineer</h3>
+          <span class="org">Mass Rail Transit 7 Inc. · Depot <span class="badge">Current</span></span>
+          <ul>
+            <li>Run pre-commissioning inspections and Functional Performance Tests for MEPF systems, verifying compliance with design specs, approved drawings, and engineering codes.</li>
+            <li>Develop and review test procedures, method statements, and Inspection &amp; Test Plans to keep commissioning systematic and aligned to schedule.</li>
+            <li>Lead integrated system testing across MEPF subsystems prior to acceptance and project handover; track defects through to closure.</li>
+            <li>Prepare commissioning reports, test records, and as-built documentation packages for handover.</li>
+            <li>Apply front-line operations experience to flag real-world operational risks during commissioning.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp">
+        <span class="when">Oct 2023 —<br>Jan 2025</span>
+        <div class="role">
+          <h3>Train Operator</h3>
+          <span class="org">Mass Rail Transit 7 Inc. · MRT-7 Line</span>
+          <ul>
+            <li>Operated passenger trains in strict compliance with railway operating rules, timetables, and emergency procedures — clean safety record throughout.</li>
+            <li>Monitored propulsion, braking, HVAC, door controls, and passenger comms; escalated anomalies to maintenance and OCC.</li>
+            <li>Coordinated with the Operations Control Centre to report and document irregularities, supporting fast fault diagnosis and service recovery.</li>
+            <li>Maintained situational awareness across train movement, platform operations, and passenger safety in a high-throughput transit environment.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp">
+        <span class="when">Concurrent</span>
+        <div class="role">
+          <h3>Associate Safety Officer</h3>
+          <span class="org">Mass Rail Transit 7 Inc.</span>
+          <ul>
+            <li>Conduct safety inspections across depot facilities; identify hazards and recommend corrective actions in line with DOLE-OSHS standards.</li>
+            <li>Assist in incident and near-miss investigations, including root-cause analysis and corrective/preventive action reports.</li>
+            <li>Deliver safety induction and toolbox talks for commissioning contractors and operations personnel.</li>
+            <li>Enforce PPE and safe work practices during high-risk activities — electrical energization, pressure testing, hot works.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp">
+        <span class="when">2014 —<br>Mar 2023</span>
+        <div class="role">
+          <h3>Sales Representative &amp; Store Manager</h3>
+          <span class="org">Kuya Jacob's Japan Surplus · Family Business</span>
+          <ul>
+            <li>Ran operations for a physical retail store and online sales channel — transactions, inventory, customer service.</li>
+            <li>Managed online listings and order fulfilment, with early hands-on exposure to digital business workflows.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects" class="reveal" aria-labelledby="proj-h">
+    <div class="section-head">
+      <span class="num"><span class="slash">//</span> 03_INITIATIVES</span>
+      <h2 id="proj-h">Automation <span class="accent">// AI side work</span></h2>
+    </div>
+    <div class="projects-grid colgrid">
+      <div class="content">
+        <p class="projects-intro">Outside of commissioning, I build AI agents and applications for a range of purposes — exploring how automation, low-code platforms, and generative AI can reduce friction in technical and operations workflows.</p>
+
+        <div class="project-card">
+          <span class="tag">// AI Agents</span>
+          <h3>Custom AI Agents · Varied Use Cases</h3>
+          <p>Built multiple AI agents tailored to different domains — technical research, documentation assistance, and operations-focused automations — using modern LLM tooling and prompt-engineering practice.</p>
+        </div>
+
+        <div class="project-card">
+          <span class="tag">// Apps &amp; Automations</span>
+          <h3>Power Platform · Low-code Applications</h3>
+          <p>Designed canvas apps and email/process automations using Microsoft Power Apps, Power Automate, and Power BI — including a real-estate solution and Excel-driven automation flows.</p>
+        </div>
+
+        <div class="project-card">
+          <span class="tag">// Tools &amp; Platforms</span>
+          <h3>Generative-AI Workflow Tooling</h3>
+          <p>Hands-on with GoHighLevel, Microsoft 365 integrations, Dynamics 365 Field Service, Process Mining, and effective prompting for generative-AI tools — applied to small, real-world workflow problems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="reveal" aria-labelledby="skills-h">
+    <div class="section-head">
+      <span class="num"><span class="slash">//</span> 04_CAPABILITIES</span>
+      <h2 id="skills-h">Technical <span class="accent">// stack</span></h2>
+    </div>
+    <div class="skills-grid colgrid">
+      <div class="skill-rows content">
+
+        <div class="skill-row">
+          <span class="cat">// Engineering</span>
+          <div class="items">
+            <span>MEPF Systems</span>
+            <span>Functional Performance Testing</span>
+            <span>Inspection &amp; Test Plans</span>
+            <span>Pre-Commissioning</span>
+            <span>System Integration Testing</span>
+            <span>Defect Snagging</span>
+            <span>Commissioning Docs</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span class="cat">// Railway Ops</span>
+          <div class="items">
+            <span>Train Operations · MRT-7</span>
+            <span>Railway Regulations</span>
+            <span>OCC Coordination</span>
+            <span>Depot Infrastructure</span>
+            <span>Safety Mgmt Systems</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span class="cat">// Safety</span>
+          <div class="items">
+            <span>DOLE-OSHS Compliance</span>
+            <span>Hazard ID</span>
+            <span>Incident Investigation</span>
+            <span>Risk Assessment</span>
+            <span>Toolbox Talks</span>
+            <span>PPE Enforcement</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span class="cat">// Automation &amp; Data</span>
+          <div class="items">
+            <span>Power Automate</span>
+            <span>Power Apps</span>
+            <span>Power BI</span>
+            <span>Power Query</span>
+            <span>GoHighLevel</span>
+            <span>Microsoft 365</span>
+            <span>Process Mining</span>
+            <span>Dynamics 365</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span class="cat">// Software</span>
+          <div class="items">
+            <span>MS Office</span>
+            <span>AutoCAD</span>
+            <span>SketchUp</span>
+            <span>Canva</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span class="cat">// Collaboration</span>
+          <div class="items">
+            <span>Zoom</span>
+            <span>MS Teams</span>
+            <span>Google Meet</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="certs" class="reveal" aria-labelledby="certs-h">
+    <div class="section-head">
+      <span class="num"><span class="slash">//</span> 05_CREDENTIALS</span>
+      <h2 id="certs-h">Licenses <span class="accent">// certifications</span></h2>
+    </div>
+    <div class="certs-grid colgrid">
+      <div class="cert-list content">
+
+        <div class="cert">
+          <div class="title">Commercial Train Driving<span class="issuer">// Philippine Railway Institute</span></div>
+          <span class="date">Aug — Oct 2023</span>
+        </div>
+        <div class="cert">
+          <div class="title">Train Operator Basic Training<span class="issuer">// San Miguel Corp. &amp; Korail</span></div>
+          <span class="date">Mar — Sep 2022</span>
+        </div>
+        <div class="cert">
+          <div class="title">Web Refresher: Railway Operation &amp; Maintenance<span class="issuer">// DOTr</span></div>
+          <span class="date">Mar 2021</span>
+        </div>
+        <div class="cert">
+          <div class="title">Basic Occupational Safety &amp; Health (BOSH) II<span class="issuer">// Think Safe Consultancy</span></div>
+          <span class="date">Dec 2025</span>
+        </div>
+        <div class="cert">
+          <div class="title">Excel Automation in Power Automate<span class="issuer">// Microsoft</span></div>
+          <span class="date">Dec 2025</span>
+        </div>
+        <div class="cert">
+          <div class="title">Build Power Apps Canvas App (Real Estate Solution)<span class="issuer">// Microsoft</span></div>
+          <span class="date">Dec 2025</span>
+        </div>
+        <div class="cert">
+          <div class="title">Create Dashboards in Power BI<span class="issuer">// Microsoft</span></div>
+          <span class="date">Jan 2026</span>
+        </div>
+        <div class="cert">
+          <div class="title">Email Automation with Power Automate<span class="issuer">// Microsoft</span></div>
+          <span class="date">Jan 2026</span>
+        </div>
+        <div class="cert">
+          <div class="title">Introduction to Power Automate Process Mining<span class="issuer">// Microsoft</span></div>
+          <span class="date">Jan 2026</span>
+        </div>
+        <div class="cert">
+          <div class="title">Effective Prompting for Generative AI Tools<span class="issuer">// Microsoft</span></div>
+          <span class="date">Jan 2026</span>
+        </div>
+        <div class="cert">
+          <div class="title">Configure Bookable Resources · Dynamics 365 Field Service<span class="issuer">// Microsoft</span></div>
+          <span class="date">Jan 2026</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal" aria-labelledby="contact-h">
+    <div class="section-head">
+      <span class="num"><span class="slash">//</span> 06_CONTACT</span>
+      <h2 id="contact-h">Open <span class="accent">// channels</span></h2>
+    </div>
+    <div class="contact-grid colgrid">
+      <div class="contact-inner content">
+        <div class="status-bar"><span class="dot" aria-hidden="true"></span> Status · Available for opportunities</div>
+        <h2 class="big">Open to roles in commissioning, operations, and <em>automation-driven</em> engineering.</h2>
+
+        <div class="contact-links">
+          <a href="mailto:johnjacobgonzales12678@gmail.com">
+            <span>johnjacobgonzales12678@gmail.com</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="tel:+639174084990">
+            <span>+63 917 408 4990</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="https://linkedin.com/in/johnjacobgonzales" target="_blank" rel="noopener noreferrer">
+            <span>LinkedIn // johnjacobgonzales <span class="visually-hidden">(opens in a new tab)</span></span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer>
+    <span>© 2026 // John Jacob P. Gonzales</span>
+    <span class="sys"><span class="dot" aria-hidden="true"></span> System Online · Caloocan · PH</span>
+  </footer>
+
+</div>
+
+<button type="button" class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script>
+  // Respect reduced-motion: skip JS-driven reveal entirely if the user opts out.
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scroll-reveal sections
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { revealObserver.observe(el); });
+  } else {
+    // Fallback: reveal everything immediately.
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Scroll-spy: highlight the active nav link
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('nav.top .links a'));
+  var sections = navLinks
+    .map(function (a) { return document.querySelector(a.getAttribute('href')); })
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && sections.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var id = e.target.getAttribute('id');
+          navLinks.forEach(function (a) {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  // Back-to-top button
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 600) { toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  }, { passive: true });
+  toTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+  });
+
+  // "Download résumé" -> open the print dialog (user picks "Save as PDF").
+  // The @media print stylesheet renders the page as a clean, light résumé.
+  var dl = document.getElementById('downloadResume');
+  if (dl) { dl.addEventListener('click', function () { window.print(); }); }
+</script>
+
+<style>
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0);
+    white-space: nowrap; border: 0;
+  }
+</style>
+
+</body>
+</html>
